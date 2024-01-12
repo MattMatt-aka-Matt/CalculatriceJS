@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculatrice</title>
+</head>
+<body>
+    <button type="button" id="toggle-calculator-button" class="button">Faire apparaître la calculatrice</button>
+    <form id="calculator-form" style="display: none;">
+        <h1>Calculatrice de fou</h1>
+        <br>
+        <a href="#" id="hide-calculator-button" class="button">Faire disparaître la calculatrice</a>
+        <br><br>
+        <input type="number" id="num1" name="num1" required>
+        <select id="operation" name="operation">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="x">x</option>
+            <option value="/">/</option>
+        </select>
+        <input type="number" id="num2" name="num2" required>
+        <br><br>
+        <button type="button" id="calculate-button" class="button">Calculer</button>
+        <br><br>
+        <div id="message" class="message"></div>
+
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>

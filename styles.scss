@@ -1,0 +1,81 @@
+// Définition des variables pour réutiliser des couleurs et des valeurs
+$background-color: #f5f5f5; // Fond gris clair
+$form-background-color: #ffffff; // Fond blanc
+$border-radius: 10px; // Coins légèrement arrondis
+$border-width: 2px; // Largeur de la bordure du formulaire
+$border-color: #007acc; // Couleur de la bordure du formulaire
+$box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); // Ombre légère
+$text-color: #333; // Couleur de texte principale
+$accent-color: #007acc; // Couleur d'accent
+
+body {
+    background-color: $background-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+#calculator-form {
+    background-color: $form-background-color;
+    border-radius: $border-radius;
+    padding: 30px;
+    border: $border-width solid $border-color; // Bordure du formulaire
+    box-shadow: $box-shadow;
+    text-align: center;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+h1 {
+    color: $accent-color;
+    font-size: 24px;
+}
+
+a {
+    color: $accent-color;
+    text-decoration: none;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+#calculator-form input[type="number"],
+#calculator-form select {
+    width: calc(50% - 5px);
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: $text-color;
+}
+
+#num1,
+#num2 {
+    width: calc(40% - 5px);
+}
+
+#operation {
+    width: calc(20% - 5px);
+}
+
+.button {
+    background-color: $accent-color;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    &:hover {
+        background-color: darken($accent-color, 10%);
+    }
+}
+
+#calculate-button,
+#show-calculator-button,
+#hide-calculator-button {
+    @extend .button;
+}
